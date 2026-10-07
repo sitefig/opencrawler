@@ -39,11 +39,16 @@ figcaption{color:var(--muted);margin:.5rem 0 1rem}
 .facts dt{font-weight:700}.facts dd{margin:0;overflow-wrap:anywhere}
 code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95em;overflow-wrap:anywhere}
 @media (max-width:40rem){.facts{grid-template-columns:1fr}}
-.consent{max-width:36rem;width:calc(100% - 2rem);background:var(--bg);color:var(--ink);border:2px solid var(--ink);border-radius:.375rem;padding:1.5rem}
-.consent::backdrop{background:rgb(0 0 0 / .6)}
-.consent h2{margin:0 0 .75rem;font-size:1.375rem}
-.consent__actions{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem;margin-top:1rem}
-#consent-reject{border-color:transparent;background:none}
-.button{font:inherit;font-weight:700;padding:.6rem 1.1rem;min-height:2.75rem;border:2px solid var(--ink);border-radius:.375rem;background:var(--bg);color:var(--ink);cursor:pointer}
-#consent-accept{background:var(--signal);color:var(--signal-ink);border-color:var(--signal-ink)}
+.consent{max-width:34rem;width:calc(100% - 2rem);background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:.75rem;padding:1.75rem;box-shadow:0 1.5rem 4rem rgb(0 0 0 / .45)}
+.consent::backdrop{background:rgb(0 0 0 / .6);backdrop-filter:blur(2px)}
+.consent h2{margin:0 0 .75rem;font-size:1.5rem;line-height:1.2}
+.consent p{margin:0 0 .75rem}
+.consent__actions{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem;margin-top:1.5rem}
+.button{font:inherit;font-weight:700;display:inline-flex;align-items:center;justify-content:center;min-width:10.5rem;min-height:3rem;padding:.6rem 1.25rem;border:2px solid transparent;border-radius:.5rem;cursor:pointer;transition:background-color .15s,transform .15s}
+#consent-reject{background:var(--surface);color:var(--ink)}
+#consent-reject:hover{background:var(--line)}
+#consent-accept{background:var(--signal);color:var(--signal-ink)}
+#consent-accept:hover{filter:brightness(.92)}
+@media (prefers-reduced-motion:no-preference){.button:active{transform:translateY(1px)}}
+@media (max-width:30rem){.button{flex:1 1 100%}}
 .linklike{font:inherit;background:none;border:0;padding:0;color:var(--link);text-decoration:underline;cursor:pointer}
