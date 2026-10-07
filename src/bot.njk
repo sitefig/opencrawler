@@ -1,0 +1,18 @@
+---
+layout: base.njk
+pagination: { data: stats.bots, size: 1, alias: b }
+permalink: "/bots/{{ b.token }}/"
+eleventyComputed:
+  title: "{{ b.token | name }} in robots.txt"
+  description: "How many sites block {{ b.token | name }} ({{ b.operator }}), measured in robots.txt files."
+---
+<h1>{{ b.token | name }}</h1>
+<p class="lede">{{ b.operator }} crawler, type: {{ b.category | cat }}.</p>
+<ul class="tiles">
+<li><strong>{{ b.mentioned | n }}</strong><span>sites name it in robots.txt</span></li>
+<li><strong>{{ b.blocked | n }}</strong><span>block it fully ({{ b.pct_blocked_of_mentions }}%)</span></li>
+<li><strong>{{ b.partial | n }}</strong><span>block some paths</span></li>
+<li><strong>{{ b.allowed | n }}</strong><span>allow it explicitly</span></li>
+</ul>
+<p>Including sites that block it only through the <code>*</code> group, {{ b.eff_pct }}% of all sites with a robots.txt keep it out.</p>
+<p><a href="/bots/">All AI crawlers</a></p>

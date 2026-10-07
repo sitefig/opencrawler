@@ -1,0 +1,11 @@
+---
+layout: base.njk
+title: How we count
+description: Where the data comes from and what a site, a block and a crawler mean here.
+permalink: /method/
+---
+<h1>How we count</h1>
+<p>Source: robots.txt captures published by Common Crawl, {{ stats.crawls }} crawls in 2026, plus a live sample of 20,000 Tranco top-1M hostnames fetched by <a href="https://sus.bot">sus.bot</a> in October 2026. The live sample is shown separately and is not part of the totals.</p>
+<p>The unit is the hostname of the robots.txt URL. Each host gets one final capture. Percentages use sites with a robots.txt as the denominator.</p>
+<p>A site "blocks" a crawler when a group naming that crawler disallows <code>/</code> with no Allow rules. Sites that block only through the <code>*</code> group are not counted in the block column.</p>
+<p>Misspelled or invented crawler names are not counted. The list of tracked crawlers is a fixed catalog.</p>

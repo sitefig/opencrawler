@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }} | opencrawler.com</title>
+<meta name="description" content="{{ description }}">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap">
+<a class="brand" href="/">open<b>crawlers</b></a>
+<nav aria-label="Main"><ul>
+<li><a href="/"{% if page.url == "/" %} aria-current="page"{% endif %}>Stats</a></li>
+<li><a href="/bots/"{% if page.url == "/bots/" %} aria-current="page"{% endif %}>AI crawlers</a></li>
+<li><a href="/method/"{% if page.url == "/method/" %} aria-current="page"{% endif %}>Method</a></li>
+<li><a href="https://sus.bot">Check your site</a></li>
+</ul></nav>
+</div></header>
+<main id="main" class="wrap">
+{{ content | safe }}
+<aside class="cta" aria-labelledby="cta-h">
+<h2 id="cta-h">What does your robots.txt say?</h2>
+<p>These numbers cover {{ stats.hosts_with_robots | m }} sites. <a href="https://sus.bot">sus.bot</a> checks yours in seconds: which AI crawlers are blocked, which paths are exposed, and how your server really answers each bot. Free.</p>
+</aside>
+</main>
+<footer><div class="wrap">
+<p>Data: Common Crawl robots.txt captures, {{ stats.crawls }} crawls, 2026. Built by <a href="https://sus.bot">sus.bot</a>. <a href="/method/">How we count</a>.</p>
+</div></footer>
+</body>
+</html>

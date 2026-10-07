@@ -1,0 +1,10 @@
+---
+layout: base.njk
+title: All AI crawlers in robots.txt
+description: Every AI training, assistant, search and scraper bot we track, with how many sites block it.
+permalink: /bots/
+---
+<h1>AI crawlers</h1>
+<p class="lede">Blocked means a group naming the bot disallows everything. Counts are sites, not files.</p>
+{% set rows = stats.bots %}{% set id = "all" %}{% set caption = "All tracked AI crawlers, most blocked first" %}
+{% include "table.njk" %}

@@ -1,0 +1,832 @@
+{
+ "hosts": 100954240.0,
+ "hosts_with_robots": 67932502.0,
+ "unique_files": 35104828.0,
+ "captures": 481536783.0,
+ "crawls": 8,
+ "bots": [
+  {
+   "token": "gptbot",
+   "operator": "OpenAI",
+   "category": "ai_training",
+   "mentioned": 4002047,
+   "blocked": 2591834,
+   "partial": 1046980,
+   "allowed": 363233,
+   "eff_pct": 7.86,
+   "pct_blocked_of_mentions": 64.8
+  },
+  {
+   "token": "amazonbot",
+   "operator": "Amazon",
+   "category": "ai_training",
+   "mentioned": 3516853,
+   "blocked": 2456303,
+   "partial": 947485,
+   "allowed": 113065,
+   "eff_pct": 7.66,
+   "pct_blocked_of_mentions": 69.8
+  },
+  {
+   "token": "bytespider",
+   "operator": "ByteDance",
+   "category": "ai_training",
+   "mentioned": 3396188,
+   "blocked": 2316633,
+   "partial": 934295,
+   "allowed": 145260,
+   "eff_pct": 7.44,
+   "pct_blocked_of_mentions": 68.2
+  },
+  {
+   "token": "claudebot",
+   "operator": "Anthropic",
+   "category": "ai_training",
+   "mentioned": 3570070,
+   "blocked": 2258964,
+   "partial": 998488,
+   "allowed": 312618,
+   "eff_pct": 7.39,
+   "pct_blocked_of_mentions": 63.3
+  },
+  {
+   "token": "ccbot",
+   "operator": "Common Crawl",
+   "category": "ai_training",
+   "mentioned": 3367481,
+   "blocked": 2243509,
+   "partial": 878480,
+   "allowed": 245492,
+   "eff_pct": 7.34,
+   "pct_blocked_of_mentions": 66.6
+  },
+  {
+   "token": "google-extended",
+   "operator": "Google",
+   "category": "ai_training",
+   "mentioned": 3283977,
+   "blocked": 2111819,
+   "partial": 905615,
+   "allowed": 266543,
+   "eff_pct": 7.17,
+   "pct_blocked_of_mentions": 64.3
+  },
+  {
+   "token": "meta-externalagent",
+   "operator": "Meta",
+   "category": "ai_training",
+   "mentioned": 3184301,
+   "blocked": 2108759,
+   "partial": 942998,
+   "allowed": 132544,
+   "eff_pct": 7.2,
+   "pct_blocked_of_mentions": 66.2
+  },
+  {
+   "token": "applebot-extended",
+   "operator": "Apple",
+   "category": "ai_training",
+   "mentioned": 3036559,
+   "blocked": 1959285,
+   "partial": 932662,
+   "allowed": 144612,
+   "eff_pct": 6.97,
+   "pct_blocked_of_mentions": 64.5
+  },
+  {
+   "token": "chatgpt-user",
+   "operator": "OpenAI",
+   "category": "ai_assistant",
+   "mentioned": 690278,
+   "blocked": 306529,
+   "partial": 108428,
+   "allowed": 275321,
+   "eff_pct": 4.53,
+   "pct_blocked_of_mentions": 44.4
+  },
+  {
+   "token": "facebookbot",
+   "operator": "Meta",
+   "category": "ai_training",
+   "mentioned": 1295241,
+   "blocked": 295045,
+   "partial": 920717,
+   "allowed": 79479,
+   "eff_pct": 4.56,
+   "pct_blocked_of_mentions": 22.8
+  },
+  {
+   "token": "anthropic-ai",
+   "operator": "Anthropic",
+   "category": "ai_training",
+   "mentioned": 1314920,
+   "blocked": 276265,
+   "partial": 854151,
+   "allowed": 184504,
+   "eff_pct": 4.49,
+   "pct_blocked_of_mentions": 21.0
+  },
+  {
+   "token": "omgili",
+   "operator": "Webz.io",
+   "category": "ai_training",
+   "mentioned": 1096438,
+   "blocked": 260052,
+   "partial": 800201,
+   "allowed": 36185,
+   "eff_pct": 4.49,
+   "pct_blocked_of_mentions": 23.7
+  },
+  {
+   "token": "diffbot",
+   "operator": "Diffbot",
+   "category": "ai_training",
+   "mentioned": 304734,
+   "blocked": 221071,
+   "partial": 15613,
+   "allowed": 68050,
+   "eff_pct": 4.48,
+   "pct_blocked_of_mentions": 72.5
+  },
+  {
+   "token": "oai-searchbot",
+   "operator": "OpenAI",
+   "category": "ai_search",
+   "mentioned": 522887,
+   "blocked": 205892,
+   "partial": 89579,
+   "allowed": 227416,
+   "eff_pct": 4.43,
+   "pct_blocked_of_mentions": 39.4
+  },
+  {
+   "token": "cohere-ai",
+   "operator": "Cohere",
+   "category": "ai_training",
+   "mentioned": 1127199,
+   "blocked": 202622,
+   "partial": 822260,
+   "allowed": 102317,
+   "eff_pct": 4.4,
+   "pct_blocked_of_mentions": 18.0
+  },
+  {
+   "token": "imagesiftbot",
+   "operator": "Hive",
+   "category": "ai_training",
+   "mentioned": 331143,
+   "blocked": 197985,
+   "partial": 10603,
+   "allowed": 122555,
+   "eff_pct": 4.43,
+   "pct_blocked_of_mentions": 59.8
+  },
+  {
+   "token": "claude-web",
+   "operator": "Anthropic",
+   "category": "ai_training",
+   "mentioned": 398318,
+   "blocked": 184643,
+   "partial": 56072,
+   "allowed": 157603,
+   "eff_pct": 4.4,
+   "pct_blocked_of_mentions": 46.4
+  },
+  {
+   "token": "perplexitybot",
+   "operator": "Perplexity",
+   "category": "ai_search",
+   "mentioned": 600248,
+   "blocked": 173400,
+   "partial": 97811,
+   "allowed": 329037,
+   "eff_pct": 4.35,
+   "pct_blocked_of_mentions": 28.9
+  },
+  {
+   "token": "omgilibot",
+   "operator": "Webz.io",
+   "category": "ai_training",
+   "mentioned": 1016525,
+   "blocked": 172351,
+   "partial": 801231,
+   "allowed": 42943,
+   "eff_pct": 4.36,
+   "pct_blocked_of_mentions": 17.0
+  },
+  {
+   "token": "youbot",
+   "operator": "You.com",
+   "category": "ai_search",
+   "mentioned": 1046420,
+   "blocked": 157612,
+   "partial": 812540,
+   "allowed": 76268,
+   "eff_pct": 4.32,
+   "pct_blocked_of_mentions": 15.1
+  },
+  {
+   "token": "timpibot",
+   "operator": "Timpi",
+   "category": "ai_training",
+   "mentioned": 181652,
+   "blocked": 117823,
+   "partial": 7689,
+   "allowed": 56140,
+   "eff_pct": 4.34,
+   "pct_blocked_of_mentions": 64.9
+  },
+  {
+   "token": "ai2bot",
+   "operator": "Allen Institute for AI",
+   "category": "ai_training",
+   "mentioned": 952483,
+   "blocked": 112352,
+   "partial": 802445,
+   "allowed": 37686,
+   "eff_pct": 4.3,
+   "pct_blocked_of_mentions": 11.8
+  },
+  {
+   "token": "velenpublicwebcrawler",
+   "operator": "Velen",
+   "category": "ai_training",
+   "mentioned": 149611,
+   "blocked": 110405,
+   "partial": 7092,
+   "allowed": 32114,
+   "eff_pct": 4.33,
+   "pct_blocked_of_mentions": 73.8
+  },
+  {
+   "token": "cohere-training-data-crawler",
+   "operator": "Cohere",
+   "category": "ai_training",
+   "mentioned": 907998,
+   "blocked": 106341,
+   "partial": 798076,
+   "allowed": 3581,
+   "eff_pct": 4.29,
+   "pct_blocked_of_mentions": 11.7
+  },
+  {
+   "token": "ai2bot-dolma",
+   "operator": "Allen Institute for AI",
+   "category": "ai_training",
+   "mentioned": 931652,
+   "blocked": 99641,
+   "partial": 799889,
+   "allowed": 32122,
+   "eff_pct": 4.28,
+   "pct_blocked_of_mentions": 10.7
+  },
+  {
+   "token": "googleother",
+   "operator": "Google",
+   "category": "ai_training",
+   "mentioned": 1068885,
+   "blocked": 99294,
+   "partial": 912089,
+   "allowed": 57502,
+   "eff_pct": 4.27,
+   "pct_blocked_of_mentions": 9.3
+  },
+  {
+   "token": "img2dataset",
+   "operator": "img2dataset",
+   "category": "ai_training",
+   "mentioned": 923276,
+   "blocked": 91426,
+   "partial": 799810,
+   "allowed": 32040,
+   "eff_pct": 4.27,
+   "pct_blocked_of_mentions": 9.9
+  },
+  {
+   "token": "webzio-extended",
+   "operator": "Webz.io",
+   "category": "ai_training",
+   "mentioned": 124655,
+   "blocked": 84014,
+   "partial": 7205,
+   "allowed": 33436,
+   "eff_pct": 4.29,
+   "pct_blocked_of_mentions": 67.4
+  },
+  {
+   "token": "pangubot",
+   "operator": "Huawei",
+   "category": "ai_training",
+   "mentioned": 88738,
+   "blocked": 81468,
+   "partial": 3770,
+   "allowed": 3500,
+   "eff_pct": 4.29,
+   "pct_blocked_of_mentions": 91.8
+  },
+  {
+   "token": "tiktokspider",
+   "operator": "ByteDance",
+   "category": "ai_training",
+   "mentioned": 882263,
+   "blocked": 76879,
+   "partial": 802773,
+   "allowed": 2611,
+   "eff_pct": 4.25,
+   "pct_blocked_of_mentions": 8.7
+  },
+  {
+   "token": "icc-crawler",
+   "operator": "NICT",
+   "category": "ai_training",
+   "mentioned": 114807,
+   "blocked": 75371,
+   "partial": 7116,
+   "allowed": 32320,
+   "eff_pct": 4.28,
+   "pct_blocked_of_mentions": 65.7
+  },
+  {
+   "token": "meta-externalfetcher",
+   "operator": "Meta",
+   "category": "ai_assistant",
+   "mentioned": 133933,
+   "blocked": 74919,
+   "partial": 15689,
+   "allowed": 43325,
+   "eff_pct": 4.27,
+   "pct_blocked_of_mentions": 55.9
+  },
+  {
+   "token": "duckassistbot",
+   "operator": "DuckDuckGo",
+   "category": "ai_search",
+   "mentioned": 912284,
+   "blocked": 70868,
+   "partial": 816317,
+   "allowed": 25099,
+   "eff_pct": 4.23,
+   "pct_blocked_of_mentions": 7.8
+  },
+  {
+   "token": "claude-searchbot",
+   "operator": "Anthropic",
+   "category": "ai_search",
+   "mentioned": 152128,
+   "blocked": 63950,
+   "partial": 42247,
+   "allowed": 45931,
+   "eff_pct": 4.25,
+   "pct_blocked_of_mentions": 42.0
+  },
+  {
+   "token": "friendlycrawler",
+   "operator": "unknown",
+   "category": "ai_training",
+   "mentioned": 99303,
+   "blocked": 61268,
+   "partial": 5960,
+   "allowed": 32075,
+   "eff_pct": 4.26,
+   "pct_blocked_of_mentions": 61.7
+  },
+  {
+   "token": "kangaroo bot",
+   "operator": "Kangaroo LLM",
+   "category": "ai_training",
+   "mentioned": 99215,
+   "blocked": 60162,
+   "partial": 6084,
+   "allowed": 32969,
+   "eff_pct": 4.25,
+   "pct_blocked_of_mentions": 60.6
+  },
+  {
+   "token": "iaskspider",
+   "operator": "iAsk",
+   "category": "ai_search",
+   "mentioned": 94168,
+   "blocked": 56161,
+   "partial": 5857,
+   "allowed": 32150,
+   "eff_pct": 4.25,
+   "pct_blocked_of_mentions": 59.6
+  },
+  {
+   "token": "claude-user",
+   "operator": "Anthropic",
+   "category": "ai_assistant",
+   "mentioned": 151621,
+   "blocked": 52231,
+   "partial": 43197,
+   "allowed": 56193,
+   "eff_pct": 4.23,
+   "pct_blocked_of_mentions": 34.4
+  },
+  {
+   "token": "google-cloudvertexbot",
+   "operator": "Google",
+   "category": "ai_training",
+   "mentioned": 62089,
+   "blocked": 48791,
+   "partial": 6212,
+   "allowed": 7086,
+   "eff_pct": 4.24,
+   "pct_blocked_of_mentions": 78.6
+  },
+  {
+   "token": "perplexity-user",
+   "operator": "Perplexity",
+   "category": "ai_assistant",
+   "mentioned": 146148,
+   "blocked": 46930,
+   "partial": 43056,
+   "allowed": 56162,
+   "eff_pct": 4.23,
+   "pct_blocked_of_mentions": 32.1
+  },
+  {
+   "token": "sidetrade indexer bot",
+   "operator": "Sidetrade",
+   "category": "ai_training",
+   "mentioned": 77535,
+   "blocked": 40427,
+   "partial": 5612,
+   "allowed": 31496,
+   "eff_pct": 4.23,
+   "pct_blocked_of_mentions": 52.1
+  },
+  {
+   "token": "phindbot",
+   "operator": "Phind",
+   "category": "ai_search",
+   "mentioned": 41000,
+   "blocked": 32482,
+   "partial": 2960,
+   "allowed": 5558,
+   "eff_pct": 4.22,
+   "pct_blocked_of_mentions": 79.2
+  },
+  {
+   "token": "mistralai-user",
+   "operator": "Mistral",
+   "category": "ai_assistant",
+   "mentioned": 57922,
+   "blocked": 31143,
+   "partial": 15988,
+   "allowed": 10791,
+   "eff_pct": 4.21,
+   "pct_blocked_of_mentions": 53.8
+  },
+  {
+   "token": "firecrawlagent",
+   "operator": "Firecrawl",
+   "category": "ai_scraper",
+   "mentioned": 39578,
+   "blocked": 30196,
+   "partial": 2899,
+   "allowed": 6483,
+   "eff_pct": 4.21,
+   "pct_blocked_of_mentions": 76.3
+  },
+  {
+   "token": "brightbot",
+   "operator": "Bright Data",
+   "category": "ai_training",
+   "mentioned": 11602,
+   "blocked": 11116,
+   "partial": 107,
+   "allowed": 379,
+   "eff_pct": 4.2,
+   "pct_blocked_of_mentions": 95.8
+  },
+  {
+   "token": "novellum",
+   "operator": "Novellum",
+   "category": "ai_training",
+   "mentioned": 211,
+   "blocked": 84,
+   "partial": 73,
+   "allowed": 54,
+   "eff_pct": 4.19,
+   "pct_blocked_of_mentions": 39.8
+  }
+ ],
+ "categories": [
+  {
+   "category": "ai_assistant",
+   "mentioned": 724296,
+   "blocking": 339313,
+   "pct": 0.5
+  },
+  {
+   "category": "ai_training",
+   "mentioned": 4677193,
+   "blocking": 3152897,
+   "pct": 4.64
+  },
+  {
+   "category": "ai_scraper",
+   "mentioned": 39578,
+   "blocking": 30196,
+   "pct": 0.04
+  },
+  {
+   "category": "ai_search",
+   "mentioned": 1647732,
+   "blocking": 386036,
+   "pct": 0.57
+  }
+ ],
+ "trend": {
+  "gptbot": [
+   [
+    "CC-MAIN-2026-12",
+    2.45
+   ],
+   [
+    "CC-MAIN-2026-17",
+    2.76
+   ],
+   [
+    "CC-MAIN-2026-21",
+    3.03
+   ],
+   [
+    "CC-MAIN-2026-25",
+    3.09
+   ],
+   [
+    "CC-MAIN-2026-30",
+    3.37
+   ],
+   [
+    "CC-MAIN-2026-34",
+    3.52
+   ],
+   [
+    "CC-MAIN-2026-39",
+    3.38
+   ]
+  ],
+  "claudebot": [
+   [
+    "CC-MAIN-2026-12",
+    2.09
+   ],
+   [
+    "CC-MAIN-2026-17",
+    2.35
+   ],
+   [
+    "CC-MAIN-2026-21",
+    2.63
+   ],
+   [
+    "CC-MAIN-2026-25",
+    2.7
+   ],
+   [
+    "CC-MAIN-2026-30",
+    2.94
+   ],
+   [
+    "CC-MAIN-2026-34",
+    3.07
+   ],
+   [
+    "CC-MAIN-2026-39",
+    2.96
+   ]
+  ],
+  "ccbot": [
+   [
+    "CC-MAIN-2026-12",
+    2.01
+   ],
+   [
+    "CC-MAIN-2026-17",
+    2.29
+   ],
+   [
+    "CC-MAIN-2026-21",
+    2.58
+   ],
+   [
+    "CC-MAIN-2026-25",
+    2.65
+   ],
+   [
+    "CC-MAIN-2026-30",
+    2.93
+   ],
+   [
+    "CC-MAIN-2026-34",
+    3.07
+   ],
+   [
+    "CC-MAIN-2026-39",
+    2.96
+   ]
+  ],
+  "google-extended": [
+   [
+    "CC-MAIN-2026-12",
+    1.91
+   ],
+   [
+    "CC-MAIN-2026-17",
+    2.18
+   ],
+   [
+    "CC-MAIN-2026-21",
+    2.46
+   ],
+   [
+    "CC-MAIN-2026-25",
+    2.53
+   ],
+   [
+    "CC-MAIN-2026-30",
+    2.77
+   ],
+   [
+    "CC-MAIN-2026-34",
+    2.9
+   ],
+   [
+    "CC-MAIN-2026-39",
+    2.75
+   ]
+  ]
+ },
+ "tlds": [
+  {
+   "tld": "top",
+   "hosts_with_robots": 188678,
+   "blocks_ai_training": 40594,
+   "pct": 21.5
+  },
+  {
+   "tld": "id",
+   "hosts_with_robots": 194978,
+   "blocks_ai_training": 24479,
+   "pct": 12.6
+  },
+  {
+   "tld": "shop",
+   "hosts_with_robots": 170858,
+   "blocks_ai_training": 19548,
+   "pct": 11.4
+  },
+  {
+   "tld": "edu",
+   "hosts_with_robots": 136560,
+   "blocks_ai_training": 12699,
+   "pct": 9.3
+  },
+  {
+   "tld": "tr",
+   "hosts_with_robots": 156624,
+   "blocks_ai_training": 13410,
+   "pct": 8.6
+  },
+  {
+   "tld": "net",
+   "hosts_with_robots": 1866156,
+   "blocks_ai_training": 131780,
+   "pct": 7.1
+  },
+  {
+   "tld": "ai",
+   "hosts_with_robots": 129142,
+   "blocks_ai_training": 8821,
+   "pct": 6.8
+  },
+  {
+   "tld": "tw",
+   "hosts_with_robots": 128072,
+   "blocks_ai_training": 8460,
+   "pct": 6.6
+  },
+  {
+   "tld": "in",
+   "hosts_with_robots": 389210,
+   "blocks_ai_training": 25406,
+   "pct": 6.5
+  },
+  {
+   "tld": "kr",
+   "hosts_with_robots": 190759,
+   "blocks_ai_training": 12404,
+   "pct": 6.5
+  },
+  {
+   "tld": "biz",
+   "hosts_with_robots": 113578,
+   "blocks_ai_training": 7014,
+   "pct": 6.2
+  },
+  {
+   "tld": "org",
+   "hosts_with_robots": 2827689,
+   "blocks_ai_training": 168580,
+   "pct": 6.0
+  },
+  {
+   "tld": "online",
+   "hosts_with_robots": 145703,
+   "blocks_ai_training": 8610,
+   "pct": 5.9
+  },
+  {
+   "tld": "ro",
+   "hosts_with_robots": 185390,
+   "blocks_ai_training": 10366,
+   "pct": 5.6
+  },
+  {
+   "tld": "gr",
+   "hosts_with_robots": 175510,
+   "blocks_ai_training": 9563,
+   "pct": 5.4
+  }
+ ],
+ "live": {
+  "hosts": 6529.0,
+  "hosts_with_robots": 6529.0,
+  "tag": "LIVE-202609",
+  "bots": [
+   {
+    "token": "ccbot",
+    "operator": "Common Crawl",
+    "mentioned": 867,
+    "blocked": 627,
+    "pct": 72.3
+   },
+   {
+    "token": "bytespider",
+    "operator": "ByteDance",
+    "mentioned": 743,
+    "blocked": 600,
+    "pct": 80.8
+   },
+   {
+    "token": "gptbot",
+    "operator": "OpenAI",
+    "mentioned": 1004,
+    "blocked": 586,
+    "pct": 58.4
+   },
+   {
+    "token": "claudebot",
+    "operator": "Anthropic",
+    "mentioned": 886,
+    "blocked": 537,
+    "pct": 60.6
+   },
+   {
+    "token": "amazonbot",
+    "operator": "Amazon",
+    "mentioned": 617,
+    "blocked": 436,
+    "pct": 70.7
+   },
+   {
+    "token": "applebot-extended",
+    "operator": "Apple",
+    "mentioned": 605,
+    "blocked": 416,
+    "pct": 68.8
+   },
+   {
+    "token": "google-extended",
+    "operator": "Google",
+    "mentioned": 763,
+    "blocked": 408,
+    "pct": 53.5
+   },
+   {
+    "token": "meta-externalagent",
+    "operator": "Meta",
+    "mentioned": 610,
+    "blocked": 401,
+    "pct": 65.7
+   },
+   {
+    "token": "diffbot",
+    "operator": "Diffbot",
+    "mentioned": 419,
+    "blocked": 350,
+    "pct": 83.5
+   },
+   {
+    "token": "anthropic-ai",
+    "operator": "Anthropic",
+    "mentioned": 537,
+    "blocked": 342,
+    "pct": 63.7
+   }
+  ]
+ }
+}

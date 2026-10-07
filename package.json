@@ -1,0 +1,1 @@
+{"name":"opencrawler","private":true,"scripts":{"data":"python3 -I scripts/export-data.py","build":"eleventy","start":"eleventy --serve"},"devDependencies":{"@11ty/eleventy":"^3.1.6"}}

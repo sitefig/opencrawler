@@ -1,0 +1,32 @@
+---
+layout: base.njk
+title: AI crawler stats from 68 million robots.txt files
+description: How many sites block GPTBot, ClaudeBot, CCBot and other AI crawlers, measured across 68 million robots.txt files.
+---
+<h1>Who blocks AI crawlers?</h1>
+<p class="lede">We read every robots.txt in {{ stats.crawls }} Common Crawl crawls. Here is what {{ stats.hosts_with_robots | m }} sites tell AI crawlers.</p>
+<ul class="tiles">
+<li><strong>{{ stats.hosts | m }}</strong><span>hostnames seen</span></li>
+<li><strong>{{ stats.hosts_with_robots | m }}</strong><span>with a robots.txt</span></li>
+<li><strong>{{ stats.unique_files | m }}</strong><span>distinct robots.txt files</span></li>
+<li><strong>{{ stats.bots | length }}</strong><span>AI crawlers tracked</span></li>
+</ul>
+<h2>Most blocked AI crawlers</h2>
+{% set rows = stats.bots | top(10) %}
+{% set id = "top" %}{% set caption = "Top 10 AI crawlers by sites that block them fully (Disallow: /)" %}
+{% include "table.njk" %}
+<p><a href="/bots/">See all {{ stats.bots | length }} AI crawlers</a></p>
+<h2>Blocking by country domain</h2>
+<div class="scroll" role="region" aria-labelledby="tld-cap" tabindex="0"><table>
+<caption id="tld-cap">Top level domains with the highest share of sites blocking AI training bots (100,000+ sites with robots.txt)</caption>
+<thead><tr><th scope="col">TLD</th><th scope="col" class="num">Sites with robots.txt</th><th scope="col" class="num">Block AI training</th></tr></thead>
+<tbody>{% for t in stats.tlds %}<tr><th scope="row">.{{ t.tld }}</th><td class="num">{{ t.hosts_with_robots | n }}</td><td class="num">{{ t.pct }}%</td></tr>{% endfor %}</tbody></table></div>
+
+{% include "trend.njk" %}
+
+<h2>Fresh live sample: popular sites</h2>
+<p class="lede">In October 2026 we fetched robots.txt live, as sus.bot, from 20,000 hostnames in the Tranco top 1 million. {{ stats.live.hosts_with_robots | n }} returned a robots.txt. These are popular sites, so they block AI crawlers far more often than the web as a whole.</p>
+<div class="scroll" role="region" aria-labelledby="live-cap" tabindex="0"><table>
+<caption id="live-cap">AI crawlers most blocked in the live sample of popular sites</caption>
+<thead><tr><th scope="col">Crawler</th><th scope="col">Operator</th><th scope="col" class="num">Sites naming it</th><th scope="col" class="num">Block it fully</th><th scope="col" class="num">Share that block</th></tr></thead>
+<tbody>{% for b in stats.live.bots %}<tr><th scope="row">{{ b.token | name }}</th><td>{{ b.operator }}</td><td class="num">{{ b.mentioned | n }}</td><td class="num">{{ b.blocked | n }}</td><td class="num">{{ b.pct }}%</td></tr>{% endfor %}</tbody></table></div>

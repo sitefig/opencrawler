@@ -1,0 +1,14 @@
+<h2 id="trend-h">Blocking over time</h2>
+<p class="lede">Share of sites that fully block each crawler, per Common Crawl crawl.</p>
+<figure>
+<svg viewBox="0 0 640 220" role="img" aria-labelledby="trend-t trend-d" class="chart">
+<title id="trend-t">Line chart: share of sites fully blocking AI crawlers per crawl</title>
+<desc id="trend-d">Exact values are in the table below the chart.</desc>
+{% for t, rows in stats.trend %}<polyline fill="none" stroke-width="3" stroke-dasharray="{{ ['0','8 4','2 4','12 4 2 4'][loop.index0] }}" class="line l{{ loop.index0 }}" points="{{ rows | points(600, 190, 6) }}" transform="translate(20 15)"/>{% endfor %}
+</svg>
+<figcaption>Solid: GPTBot. Dashed and dotted lines: ClaudeBot, CCBot, Google-Extended (see table).</figcaption>
+</figure>
+<div class="scroll" role="region" aria-labelledby="tr-cap" tabindex="0"><table>
+<caption id="tr-cap">Share of sites fully blocking each crawler, by crawl (%)</caption>
+<thead><tr><th scope="col">Crawl</th>{% for t, rows in stats.trend %}<th scope="col" class="num">{{ t | name }}</th>{% endfor %}</tr></thead>
+<tbody>{% for r in stats.trend.gptbot %}{% set i = loop.index0 %}<tr><th scope="row">{{ r[0] }}</th>{% for t, rows in stats.trend %}<td class="num">{{ rows[i][1] }}</td>{% endfor %}</tr>{% endfor %}</tbody></table></div>
