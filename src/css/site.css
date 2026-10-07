@@ -42,7 +42,8 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95em;overflow-
 .consent{max-width:36rem;width:calc(100% - 2rem);background:var(--bg);color:var(--ink);border:2px solid var(--ink);border-radius:.375rem;padding:1.5rem}
 .consent::backdrop{background:rgb(0 0 0 / .6)}
 .consent h2{margin:0 0 .75rem;font-size:1.375rem}
-.consent__actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1rem}
+.consent__actions{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.75rem;margin-top:1rem}
+#consent-reject{border-color:transparent;background:none}
 .button{font:inherit;font-weight:700;padding:.6rem 1.1rem;min-height:2.75rem;border:2px solid var(--ink);border-radius:.375rem;background:var(--bg);color:var(--ink);cursor:pointer}
 #consent-accept{background:var(--signal);color:var(--signal-ink);border-color:var(--signal-ink)}
 .linklike{font:inherit;background:none;border:0;padding:0;color:var(--link);text-decoration:underline;cursor:pointer}
