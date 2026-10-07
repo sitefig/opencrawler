@@ -1,0 +1,157 @@
+[
+ {
+  "token": "gptbot",
+  "doc_url": "https://developers.openai.com/api/docs/bots",
+  "user_agent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; GPTBot/1.4; +https://openai.com/gptbot",
+  "purpose": "Crawls content that may be used to make OpenAI generative AI foundation models more useful and safe, i.e. training.",
+  "respects_robots": "yes",
+  "ip_ranges_url": "https://openai.com/gptbot.json",
+  "notes": [
+   "Disallowing GPTBot signals that site content should not be used to train generative models.",
+   "Version number may change."
+  ],
+  "verified": true
+ },
+ {
+  "token": "chatgpt-user",
+  "doc_url": "https://developers.openai.com/api/docs/bots",
+  "user_agent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ChatGPT-User/1.0; +https://openai.com/bot",
+  "purpose": "Used for user-initiated actions in ChatGPT and Custom GPTs; may visit web pages when users ask questions or use GPT Actions.",
+  "respects_robots": "no",
+  "ip_ranges_url": "https://openai.com/chatgpt-user.json",
+  "notes": [
+   "Page says robots.txt rules may not apply because actions are user-initiated.",
+   "Not used for search or automatic web crawling."
+  ],
+  "verified": true
+ },
+ {
+  "token": "oai-searchbot",
+  "doc_url": "https://developers.openai.com/api/docs/bots",
+  "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36; compatible; OAI-SearchBot/1.4; +https://openai.com/searchbot",
+  "purpose": "Used to surface websites in search results in ChatGPT's search features.",
+  "respects_robots": "yes",
+  "ip_ranges_url": "https://openai.com/searchbot.json",
+  "notes": [
+   "Opting out prevents appearance in ChatGPT search answers; roughly 24 hour update lag.",
+   "Separate from GPTBot (training)."
+  ],
+  "verified": true
+ },
+ {
+  "token": "claudebot",
+  "doc_url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+  "user_agent": null,
+  "purpose": "Collects web content to help enhance the utility and safety of Anthropic's generative AI models.",
+  "respects_robots": "yes",
+  "ip_ranges_url": "https://claude.com/crawling/bots.json",
+  "notes": [
+   "Page gives robots.txt examples: Disallow: / and Crawl-delay: 1.",
+   "Full User-Agent string not shown on the fetched page.",
+   "IP list at the bots.json URL; it lists prefixes only, without per-bot labels."
+  ],
+  "verified": true
+ },
+ {
+  "token": "anthropic-ai",
+  "doc_url": null,
+  "user_agent": null,
+  "purpose": "No operator documentation found.",
+  "respects_robots": "unknown",
+  "ip_ranges_url": null,
+  "notes": [
+   "Not mentioned on the fetched Anthropic page; no separate operator page found, so nothing recorded. Page not found; verified false."
+  ],
+  "verified": false
+ },
+ {
+  "token": "claude-web",
+  "doc_url": null,
+  "user_agent": null,
+  "purpose": "No operator documentation found.",
+  "respects_robots": "unknown",
+  "ip_ranges_url": null,
+  "notes": [
+   "Not mentioned on the fetched Anthropic page; no separate operator page found, so nothing recorded. Page not found; verified false."
+  ],
+  "verified": false
+ },
+ {
+  "token": "claude-user",
+  "doc_url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+  "user_agent": null,
+  "purpose": "Supports Claude users by accessing websites when individuals ask Claude questions.",
+  "respects_robots": "yes",
+  "ip_ranges_url": "https://claude.com/crawling/bots.json",
+  "notes": [
+   "Page states it respects do-not-crawl signals.",
+   "Full User-Agent string not shown on the fetched page."
+  ],
+  "verified": true
+ },
+ {
+  "token": "claude-searchbot",
+  "doc_url": "https://support.claude.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
+  "user_agent": null,
+  "purpose": "Navigates the web to improve search result quality for users.",
+  "respects_robots": "yes",
+  "ip_ranges_url": "https://claude.com/crawling/bots.json",
+  "notes": [
+   "Full User-Agent string not shown on the fetched page.",
+   "Separate bot from ClaudeBot (training) and Claude-User (user-initiated)."
+  ],
+  "verified": true
+ },
+ {
+  "token": "perplexitybot",
+  "doc_url": "https://docs.perplexity.ai/guides/bots",
+  "user_agent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; PerplexityBot/1.0; +https://perplexity.ai/perplexitybot)",
+  "purpose": "Designed to surface and link websites in Perplexity search results; not used to crawl content for AI foundation models.",
+  "respects_robots": "yes",
+  "ip_ranges_url": "https://www.perplexity.com/perplexitybot.json",
+  "notes": [
+   "Sites should explicitly allow it for search result inclusion."
+  ],
+  "verified": true
+ },
+ {
+  "token": "perplexity-user",
+  "doc_url": "https://docs.perplexity.ai/guides/bots",
+  "user_agent": "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Perplexity-User/1.0; +https://perplexity.ai/perplexity-user)",
+  "purpose": "Fetches pages when Perplexity users ask questions that need web page access.",
+  "respects_robots": "no",
+  "ip_ranges_url": "https://www.perplexity.com/perplexity-user.json",
+  "notes": [
+   "Page: since a user requested the fetch, this fetcher generally ignores robots.txt rules."
+  ],
+  "verified": true
+ },
+ {
+  "token": "google-extended",
+  "doc_url": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+  "user_agent": null,
+  "purpose": "Robots.txt control token only: manages whether content Google crawls may be used for training future Gemini models (Gemini Apps, Vertex AI API) and for grounding.",
+  "respects_robots": "unknown",
+  "ip_ranges_url": null,
+  "notes": [
+   "Page: Google-Extended has no separate HTTP user agent string; crawling uses existing Google user agent strings.",
+   "Does not affect inclusion in Google Search and is not a ranking signal.",
+   "Not listed on the special-case crawlers page; found on the common crawlers page."
+  ],
+  "verified": true
+ },
+ {
+  "token": "googleother",
+  "doc_url": "https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers",
+  "user_agent": "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/W.X.Y.Z Mobile Safari/537.36 (compatible; GoogleOther)",
+  "purpose": "Generic crawler used by various Google product teams to fetch publicly accessible content, e.g. one-off crawls for internal research and development.",
+  "respects_robots": "unknown",
+  "ip_ranges_url": null,
+  "notes": [
+   "Second published UA: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GoogleOther) Chrome/W.X.Y.Z Safari/537.36",
+   "Page gives user-agent GoogleOther robots.txt example; IP list URL not captured from fetch.",
+   "W.X.Y.Z is the page's Chrome version placeholder."
+  ],
+  "verified": true
+ }
+]

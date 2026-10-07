@@ -1,0 +1,165 @@
+[
+ {
+  "token": "diffbot",
+  "doc_url": "https://www.diffbot.com/docs/crawl/faq/robots-txt",
+  "user_agent": null,
+  "purpose": "Diffbot crawls the web generally to build a search engine and knowledge graph, similar to Googlebot or Bingbot.",
+  "respects_robots": "yes",
+  "ip_ranges_url": null,
+  "notes": [
+   "States it is not used for AI training and that Diffbot does not crawl pages for training generative AI foundation models.",
+   "A second agent, Diffbot-User, covers requests made on behalf of a human user of Diffbot software.",
+   "Robots.txt can be overridden in specific cases such as a partnership with the site; page text fetched did not show a full UA string."
+  ],
+  "verified": true
+ },
+ {
+  "token": "ai2bot",
+  "doc_url": "https://allenai.org/crawler",
+  "user_agent": "Mozilla/5.0 (compatible) AI2Bot (+https://www.allenai.org/crawler)",
+  "purpose": "AI2Bot explores web domains to collect content used for training open language models.",
+  "respects_robots": "unknown",
+  "ip_ranges_url": null,
+  "notes": [
+   "Page says the bot can be filtered or rejected via its user-agent string.",
+   "Page does not mention robots.txt directives, the AI2Bot-Dolma token or an IP list."
+  ],
+  "verified": true
+ },
+ {
+  "token": "ai2bot-dolma",
+  "doc_url": "https://allenai.org/crawler",
+  "user_agent": null,
+  "purpose": "Not documented on the fetched Allen Institute page.",
+  "respects_robots": "unknown",
+  "ip_ranges_url": null,
+  "notes": [
+   "Fetched AI2 crawler page does not mention an AI2Bot-Dolma token; no primary source found, so unverified."
+  ],
+  "verified": false
+ },
+ {
+  "token": "omgili",
+  "doc_url": "https://webz.io/bot.html",
+  "user_agent": null,
+  "purpose": "Webz.io describes a crawler pair (Webzio and Webzio-extended) that collects news, blogs, discussions and reviews for its data products; Webzio-extended tags data as usable or not usable for AI/ML training.",
+  "respects_robots": "yes",
+  "ip_ranges_url": null,
+  "notes": [
+   "Page names Omgilibot as the legacy crawler, Webzio as current crawler and Webzio-extended as the validation bot.",
+   "States it only provides data tagged as explicitly permitted for AI purposes.",
+   "Page gives no full user-agent strings and no IP list."
+  ],
+  "verified": true
+ },
+ {
+  "token": "omgilibot",
+  "doc_url": "https://webz.io/bot.html",
+  "user_agent": null,
+  "purpose": "Webz.io describes a crawler pair (Webzio and Webzio-extended) that collects news, blogs, discussions and reviews for its data products; Webzio-extended tags data as usable or not usable for AI/ML training.",
+  "respects_robots": "yes",
+  "ip_ranges_url": null,
+  "notes": [
+   "Page names Omgilibot as the legacy crawler, Webzio as current crawler and Webzio-extended as the validation bot.",
+   "States it only provides data tagged as explicitly permitted for AI purposes.",
+   "Page gives no full user-agent strings and no IP list."
+  ],
+  "verified": true
+ },
+ {
+  "token": "webzio-extended",
+  "doc_url": "https://webz.io/bot.html",
+  "user_agent": null,
+  "purpose": "Webz.io describes a crawler pair (Webzio and Webzio-extended) that collects news, blogs, discussions and reviews for its data products; Webzio-extended tags data as usable or not usable for AI/ML training.",
+  "respects_robots": "yes",
+  "ip_ranges_url": null,
+  "notes": [
+   "Page names Omgilibot as the legacy crawler, Webzio as current crawler and Webzio-extended as the validation bot.",
+   "States it only provides data tagged as explicitly permitted for AI purposes.",
+   "Page gives no full user-agent strings and no IP list."
+  ],
+  "verified": true
+ },
+ {
+  "token": "imagesiftbot",
+  "doc_url": "https://imagesift.com/about",
+  "user_agent": "Mozilla/5.0 (compatible; ImagesiftBot; +imagesift.com)",
+  "purpose": "ImagesiftBot scrapes the internet for publicly available images to support Hive's web intelligence products.",
+  "respects_robots": "yes",
+  "ip_ranges_url": null,
+  "notes": [
+   "Honors crawl-delay as minimum seconds between starts of consecutive requests.",
+   "Follows Googlebot directives if no ImagesiftBot-specific rule exists.",
+   "Opt out via robots.txt or by contacting support@imagesift.com; no IP list published."
+  ],
+  "verified": true
+ },
+ {
+  "token": "timpibot",
+  "doc_url": null,
+  "user_agent": null,
+  "purpose": null,
+  "respects_robots": "unknown",
+  "ip_ranges_url": null,
+  "notes": [
+   "No operator page found or fetchable for this token; nothing recorded from a primary source.",
+   "timpi.io and its gitbook knowledge base were fetched but contain no crawler information."
+  ],
+  "verified": false
+ },
+ {
+  "token": "pangubot",
+  "doc_url": null,
+  "user_agent": null,
+  "purpose": null,
+  "respects_robots": "unknown",
+  "ip_ranges_url": null,
+  "notes": [
+   "No operator page found or fetchable for this token; nothing recorded from a primary source.",
+   "Only third-party bot directories found, which were not used."
+  ],
+  "verified": false
+ },
+ {
+  "token": "img2dataset",
+  "doc_url": "https://github.com/rom1504/img2dataset",
+  "user_agent": null,
+  "purpose": "Open source tool that downloads images from lists of URLs for machine learning datasets and web indexing.",
+  "respects_robots": "unknown",
+  "ip_ranges_url": null,
+  "notes": [
+   "By default ignores images served with X-Robots-Tag noai, noindex, noimageai or noimageindex; disable with --disallowed_header_directives '[]'.",
+   "README does not mention robots.txt and gives no default user agent; --user_agent_token adds an identifying token to the User-Agent header.",
+   "Claims about 100M urls in 20h on one machine."
+  ],
+  "verified": true
+ },
+ {
+  "token": "velenpublicwebcrawler",
+  "doc_url": "https://hunter.io/robot",
+  "user_agent": "Mozilla/5.0 (compatible; VelenPublicWebCrawler/1.0; +https://velen.io)",
+  "purpose": "Hunter's robot analyzes public web pages for business data used in Hunter's lead generation tools.",
+  "respects_robots": "yes",
+  "ip_ranges_url": null,
+  "notes": [
+   "Page says it strictly respects robots.txt disallow and allow rules.",
+   "Never visits more than one page every two seconds per website.",
+   "Operated by Velen; page maintained by Hunter; no IP list."
+  ],
+  "verified": true
+ },
+ {
+  "token": "icc-crawler",
+  "doc_url": "https://ucri.nict.go.jp/en/icccrawler.html",
+  "user_agent": "ICC-Crawler",
+  "purpose": "Research and development of advanced information processing including multilingual translation, information analysis and AI technologies.",
+  "respects_robots": "yes",
+  "ip_ranges_url": null,
+  "notes": [
+   "Supports REP/RFC 9309 and Crawl-Delay; operated by NICT Universal Communication Research Institute.",
+   "Page lists IPs 202.180.34.186 and 61.86.246.72 but no IP list URL.",
+   "Collected data may be shared with third parties for research; stops access on host operator request."
+  ],
+  "verified": true
+ }
+]

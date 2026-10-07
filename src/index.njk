@@ -29,4 +29,4 @@ description: How many sites block GPTBot, ClaudeBot, CCBot and other AI crawlers
 <div class="scroll" role="region" aria-labelledby="live-cap" tabindex="0"><table>
 <caption id="live-cap">AI crawlers most blocked in the live sample of popular sites</caption>
 <thead><tr><th scope="col">Crawler</th><th scope="col">Operator</th><th scope="col" class="num">Sites naming it</th><th scope="col" class="num">Block it fully</th><th scope="col" class="num">Share that block</th></tr></thead>
-<tbody>{% for b in stats.live.bots %}<tr><th scope="row">{{ b.token | name }}</th><td>{{ b.operator }}</td><td class="num">{{ b.mentioned | n }}</td><td class="num">{{ b.blocked | n }}</td><td class="num">{{ b.pct }}%</td></tr>{% endfor %}</tbody></table></div>
+<tbody>{% for b in stats.live.bots %}<tr><th scope="row"><a href="/bots/{{ b.token }}/">{{ b.token | name }}</a></th><td>{{ b.operator }}</td><td class="num">{{ b.mentioned | n }}</td><td class="num">{{ b.blocked | n }}</td><td class="num">{{ b.pct }}%</td></tr>{% endfor %}</tbody></table></div>

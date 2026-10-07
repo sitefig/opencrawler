@@ -14,5 +14,21 @@ eleventyComputed:
 <li><strong>{{ b.partial | n }}</strong><span>block some paths</span></li>
 <li><strong>{{ b.allowed | n }}</strong><span>allow it explicitly</span></li>
 </ul>
+{% set i = botinfo[b.token] %}
+<h2>About this crawler</h2>
+{% if i and i.verified %}
+<p>{{ i.purpose }}</p>
+<dl class="facts">
+{% if i.user_agent %}<dt>User-Agent</dt><dd><code>{{ i.user_agent }}</code></dd>{% endif %}
+<dt>robots.txt token</dt><dd><code>{{ b.token }}</code></dd>
+<dt>Respects robots.txt</dt><dd>{{ i.respects_robots }}</dd>
+{% if i.ip_ranges_url %}<dt>Published IP ranges</dt><dd><a href="{{ i.ip_ranges_url }}" rel="noopener">{{ i.ip_ranges_url }}</a></dd>{% endif %}
+<dt>Operator page</dt><dd><a href="{{ i.doc_url }}" rel="noopener">{{ i.doc_url }}</a></dd>
+</dl>
+{% if i.notes.length %}<ul>{% for n in i.notes %}<li>{{ n }}</li>{% endfor %}</ul>{% endif %}
+{% else %}
+<p>No operator documentation found for this crawler. It is counted because sites name it in robots.txt.</p>
+<p><code>{{ b.token }}</code></p>
+{% endif %}
 <p>Including sites that block it only through the <code>*</code> group, {{ b.eff_pct }}% of all sites with a robots.txt keep it out.</p>
 <p><a href="/bots/">All AI crawlers</a></p>

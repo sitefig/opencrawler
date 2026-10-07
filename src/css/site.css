@@ -35,3 +35,7 @@ footer{border-top:1px solid var(--line);margin-top:4rem;padding:2rem 0;color:var
 .chart{width:100%;height:auto;background:var(--surface);border:1px solid var(--line);border-radius:.375rem}
 .line{stroke:var(--bar)}.l1{stroke:var(--link)}.l2{stroke:var(--muted)}.l3{stroke:var(--ink)}
 figcaption{color:var(--muted);margin:.5rem 0 1rem}
+.facts{display:grid;grid-template-columns:max-content 1fr;gap:.5rem 1.5rem}
+.facts dt{font-weight:700}.facts dd{margin:0;overflow-wrap:anywhere}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95em;overflow-wrap:anywhere}
+@media (max-width:40rem){.facts{grid-template-columns:1fr}}
