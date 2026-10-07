@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 pagination: { data: stats.bots, size: 1, alias: b }
-permalink: "/bots/{{ b.token }}/"
+permalink: "/bots/{{ b.token | slug }}/"
 eleventyComputed:
   title: "{{ b.token | name }} in robots.txt"
   description: "How many sites block {{ b.token | name }} ({{ b.operator }}), measured in robots.txt files."
@@ -19,11 +19,11 @@ eleventyComputed:
 {% if i and i.verified %}
 <p>{{ i.purpose }}</p>
 <dl class="facts">
-{% if i.user_agent %}<dt>User-Agent</dt><dd><code>{{ i.user_agent }}</code></dd>{% endif %}
+{% if i.user_agent %}<dt>User-Agent</dt><dd><code>{{ i.user_agent }}</code>{% if i.user_agent_src %} <small>(third party: <a href="{{ i.user_agent_src }}" rel="noopener">source</a>)</small>{% endif %}</dd>{% endif %}
 <dt>robots.txt token</dt><dd><code>{{ b.token }}</code></dd>
-<dt>Respects robots.txt</dt><dd>{{ i.respects_robots }}</dd>
+<dt>Respects robots.txt</dt><dd>{{ i.respects_robots }}{% if i.respects_robots_src %} <small>(third party: <a href="{{ i.respects_robots_src }}" rel="noopener">source</a>)</small>{% endif %}</dd>
 {% if i.ip_ranges_url %}<dt>Published IP ranges</dt><dd><a href="{{ i.ip_ranges_url }}" rel="noopener">{{ i.ip_ranges_url }}</a></dd>{% endif %}
-<dt>Operator page</dt><dd><a href="{{ i.doc_url }}" rel="noopener">{{ i.doc_url }}</a></dd>
+<dt>{% if i.source_type == "third_party" %}Source (third party, not confirmed by the operator){% else %}Operator page{% endif %}</dt><dd><a href="{{ i.doc_url }}" rel="noopener">{{ i.doc_url }}</a></dd>
 </dl>
 {% if i.notes.length %}<ul>{% for n in i.notes %}<li>{{ n }}</li>{% endfor %}</ul>{% endif %}
 {% else %}

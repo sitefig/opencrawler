@@ -3,6 +3,6 @@
 <caption id="{{ id }}-cap">{{ caption }}</caption>
 <thead><tr><th scope="col">Crawler</th><th scope="col">Operator</th><th scope="col">Type</th><th scope="col" class="num">Sites naming it</th><th scope="col" class="num">Block it fully</th><th scope="col">Share of naming sites that block</th></tr></thead>
 <tbody>
-{% for b in rows %}<tr><th scope="row"><a href="/bots/{{ b.token }}/">{{ b.token | name }}</a></th><td>{{ b.operator }}</td><td>{{ b.category | cat }}</td><td class="num">{{ b.mentioned | n }}</td><td class="num">{{ b.blocked | n }}</td><td><span class="bar" aria-hidden="true"><i style="width:{{ b.pct_blocked_of_mentions }}%"></i></span>{{ b.pct_blocked_of_mentions }}%</td></tr>
+{% for b in rows %}<tr><th scope="row"><a href="/bots/{{ b.token | slug }}/">{{ b.token | name }}</a></th><td>{{ b.operator }}</td><td>{{ b.category | cat }}</td><td class="num">{{ b.mentioned | n }}</td><td class="num">{{ b.blocked | n }}</td><td><span class="bar" aria-hidden="true"><i style="width:{{ b.pct_blocked_of_mentions }}%"></i></span>{{ b.pct_blocked_of_mentions }}%</td></tr>
 {% endfor %}
 </tbody></table></div>
