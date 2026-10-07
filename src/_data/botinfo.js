@@ -10,6 +10,10 @@ for (const p of load(/^patch-\d+\.json$/)) {
     // Operator-verified: keep its page and text, fill only missing fields, and say where they came from.
     for (const k of ["user_agent", "respects_robots", "ip_ranges_url"]) {
       if ((base[k] == null || base[k] === "unknown") && p[k] != null && p[k] !== "unknown") { base[k] = p[k]; base[k + "_src"] = p.doc_url; }
+      // drop operator-page notes that now say the value is missing
+    }
+    if (base.user_agent_src) base.notes = (base.notes ?? []).filter((n) => !/user-agent.*(not (given|published|stated|shown|provided|listed)|no .*string)/i.test(n));
+    {
     }
     continue;
   }
