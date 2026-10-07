@@ -1,5 +1,5 @@
 export default function (c) {
-  c.addPassthroughCopy({ "src/fonts": "fonts", "src/favicon.svg": "favicon.svg", "src/css": "css", "src/CNAME": "CNAME" });
+  c.addPassthroughCopy({ "src/fonts": "fonts", "src/favicon.svg": "favicon.svg", "src/css": "css", "src/js": "js", "src/CNAME": "CNAME" });
   c.addFilter("n", (v) => Math.round(v).toLocaleString("en-US"));
   c.addFilter("m", (v) => (v / 1e6).toFixed(1) + "M");
   c.addFilter("name", (t) => ({ gptbot: "GPTBot", claudebot: "ClaudeBot", ccbot: "CCBot", "google-extended": "Google-Extended", amazonbot: "Amazonbot", bytespider: "Bytespider" })[t] || t);
